@@ -1,0 +1,24 @@
+<view class="container">
+  <van-empty description="暂无数据" wx:if="{{itemLIst == 0}}" />
+  <block wx:else>
+    <view class="wrapper" wx:for="{{itemLIst}}" wx:key="index">
+      <view class="avatar">
+        <image mode="aspectFit" class="avatar-img"
+          src="{{item.production.style.images.url[0] ? item.production.style.images.url[0] : 'https://jack-mes.oss-cn-hangzhou.aliyuncs.com/center/1/2020/11/9cfd6cc5366680f49b1c3d35aa4b18d7.png'}}">
+        </image>
+      </view>
+      <view class="detail">
+        <view class="name">外协工序: {{item.delegated_cate ? item.delegated_cate : '未填写'}}</view>
+        <view class="phone">外协数量: {{item.num ? item.num : '0'}}
+        </view>
+        <view class="phone">验收数量: {{item.qualified_num ? item.qualified_num : '0'}}
+        </view>
+        <view class="phone">外协公司: {{item.production.company.name ? item.production.company.name : '未知'}}
+        </view>
+      </view>
+      <view class="editBox">
+			<text class="{{item.state == 1 ? 'state1' : item.state == 2 ? 'state2' : item.state == 3 ? 'state3' : 'state4'}}" bindtap="chooseItem" data-Touchid="{{item}}">{{item.state == 1 ? '已创建' : item.state == 2 ? '制作中' : item.state == 3 ? '已完成' : '未知'}}</text>
+			</view>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,37 @@
+<view class="container">
+	<van-search value="{{ value }}" background="#03A2E3" placeholder="请输入生产单" use-action-slot bind:change="onChanges"
+		bind:clear="searchClear">
+		<view slot="action" class="searchText" bind:tap="onClick">搜索</view>
+	</van-search>
+	<view class="title">
+		<text class="name1">图片</text>
+		<text class="name">生产单</text>
+		<text class="name11">总数</text>
+		<text class="name">当前状态</text>
+	</view>
+	<van-empty description="暂无数据" wx:if="{{ItemLIst.length == 0}}" />
+	<view wx:else>
+		<van-collapse wx:for="{{ItemLIst}}" wx:key="index" data-Touchid="{{item}}" data-index="{{index}}"
+			value="{{activeNames}}" bind:change="onChange" bind:open="onOpen" bind:close="onClose" accordion="true">
+			<van-collapse-item name="{{index}}">
+				<view slot="title" class="lineRow">
+					<image class="main-item-img" mode="scaleToFill"
+						src="{{item.style.url[0] ? item.style.url[0]+'?x-oss-process=image/resize,w_100': 'https://jack-mes.oss-cn-hangzhou.aliyuncs.com/wxapp/images/zetp.png'}}">
+					</image>
+					<text class="main-item item1"> {{item.production_no}} </text>
+					<text class=" item11"> {{item.num}} </text>
+					<text class=" item111"> {{item.state}}</text>
+				</view>
+				
+				<view class="axxsasa">
+					<van-steps bind:click-step="stapClick" steps="{{ steps }}" active-icon="success" active="{{ active }}"
+						class="van-steps" />
+					<view class="wxWrapper">
+						<view class="axxsasa11" bindtap="anotherWork" data-Touchid="{{item}}">外协</view>
+						<view class="axxsasa12">{{item.delegated.undo ? item.delegated.undo : '0'}}/{{item.delegated.total ? item.delegated.total : '0'}}</view>
+					</view>
+				</view>
+			</van-collapse-item>
+		</van-collapse>
+	</view>
+</view>

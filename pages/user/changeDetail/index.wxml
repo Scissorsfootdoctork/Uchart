@@ -1,0 +1,42 @@
+<view class="container">
+	<form catchsubmit="formSubmit">
+		<view class="changeItem nomal">
+			<text class="name">姓名</text>
+			<view class="right">
+				<input class="weui-input" type="text" disabled="true" name="name" placeholder="{{name}}" />
+			</view>
+		</view>
+
+		<!-- <view class="changeItem nomal">
+			<text class="name">密码</text>
+			<view class="right">
+				<input class="weui-input" name="password" disabled="true" password type="text" placeholder="请输入密码" />
+				
+			</view> -->
+		<!-- </view> -->
+		<!-- <view class="changeItem nomal">
+			<text class="name">密码校验</text>
+			<view class="right">
+				<input class="weui-input" name="password2" disabled="true" password type="text" placeholder="请再次输入密码" />
+				
+			</view>
+		</view> -->
+
+<view class="changeItem nomal">
+			<text class="name">部门</text>
+			<view class="right">
+				<picker bindchange="bindPickerChange" disabled="true" value="{{index}}" range="{{array}}" range-key="dept_name">
+    <view class="picker">
+     <text class="pickername">{{array[index].dept_name}}</text>
+    </view>
+  </picker> 
+				
+			</view>
+		</view>
+
+		<!-- <view class="btn-area">
+			<button class="btn" formType="submit">提交</button>
+		</view> -->
+
+	</form>
+</view>

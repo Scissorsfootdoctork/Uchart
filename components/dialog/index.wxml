@@ -1,0 +1,2 @@
+<mp-dialog title="{{title}}" show="{{showDialog}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}">
+</mp-dialog>

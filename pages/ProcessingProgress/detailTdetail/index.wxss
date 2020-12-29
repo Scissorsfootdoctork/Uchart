@@ -1,0 +1,44 @@
+/* pages/moneySort/index.wxss */
+.container{
+	width: 100%;
+	position: relative;
+}
+
+.title{
+	display: flex;
+	padding: 30rpx 0;
+	justify-content: space-evenly;
+	color:#303133;
+	background-color: #F2F6FC;
+	border-bottom: 1px solid var(--weui-FG-3);
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 99;
+}
+.name, .main-item{
+	flex: 1;
+	text-align: center;
+}
+.main {
+	display: flex;
+	padding: 25rpx 0;
+	justify-content: space-evenly;
+	color:#606266;
+	border-bottom: 1px solid var(--weui-FG-3);
+}
+
+.changeDetail {
+	box-sizing: border-box;
+	color: #606266;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid var(--weui-FG-3);
+}
+
+.detailLeft, .detailright {
+	flex: 1;
+	text-align: center;
+	padding: 40rpx 0;
+}

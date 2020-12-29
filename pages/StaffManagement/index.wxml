@@ -1,0 +1,42 @@
+<view class="container">
+<van-search
+  value="{{ value }}"
+  background="#03A2E3"
+  placeholder="请输入姓名/电话"
+  use-action-slot
+  bind:change="onChange"
+	bind:clear="searchClear"
+>
+  <view slot="action" class="searchText" bind:tap="onClick">搜索</view>
+</van-search>
+	<view class="addWrapper">
+		<mp-icon class="icon" icon="add" color="#ffffff" size="{{25}}" bindtap="addNewPelple"></mp-icon>
+	</view>
+<van-empty description="暂无数据" wx:if="{{ItemLIst.length == 0}}" />
+	<view wx:else>
+	<mp-slideview wx:for="{{ItemLIst}}" wx:key="index" buttons="{{slideButtons}}" bindbuttontap="slideButtonTap" data-Touchid="{{item.user_id}}">
+		<view class="wrapper">
+			<view class="avatar">
+				<image mode="aspectFit" class="avatar-img" src="{{item.avatar ? item.avatar : 'https://jack-mes.oss-cn-hangzhou.aliyuncs.com/center/1/2020/11/9cfd6cc5366680f49b1c3d35aa4b18d7.png'}}"></image>
+			</view>
+			<view class="detail">
+				<view class="name">{{item.name ? item.name : '未填写'}}</view>
+				<view class="phone">{{item.dept_name ? item.dept_name : '暂未分配部门'}}  {{item.dept2_name ? item.dept2_name : ''}}</view>
+				<view class="phone">{{item.mobile}}</view>
+			</view>
+			<view class="editBox">
+			<text class="change" bindtap="chooseItem" data-Touchid="{{item}}">修改</text>
+			<text class="change1" wx:if="{{item.openid}}" bindtap="cancleBind" data-Touchid="{{item}}">解绑</text>
+			</view>
+		</view>
+	</mp-slideview>
+	<mp-dialog title="是否确认删除？" show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}">
+    </mp-dialog>
+		<mp-dialog title="是否确认解绑？" show="{{dialogShow1}}" bindbuttontap="tapDialogButton1" buttons="{{buttons1}}">
+    </mp-dialog>
+	<view class="boxs">
+		<text class="size">杰克股份</text>
+		<text class="size">v1.2.9</text>
+	</view>
+	</view>
+</view>

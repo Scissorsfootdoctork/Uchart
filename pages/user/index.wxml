@@ -1,0 +1,65 @@
+<view class="container">
+	<!-- <view class="oiyui">
+		<official-account bindload="gzh"></official-account>
+	</view> -->
+	<view class="wrapper">
+		<view class="avatar">
+			<image mode="aspectFit" class="avatar-img" src="{{pageData.avatar}}"></image>
+		</view>
+		<view class="detail">
+			<view class="name">{{pageData.name}}</view>
+			<view class="phone">{{pageData.mobile}}</view>
+			<view class="phone">{{pageData.centerName}}</view>
+		</view>
+	</view>
+</view>
+<view class="sizebox"></view>
+<view class="main">
+<view class="main-item" bindtap="changeDetail">
+		<view class="itemboxaaasas">
+		<van-icon name="manager-o"  size="25" color="#909399" />
+			<text class="main-item-name">我的资料</text>
+		</view>
+		<mp-icon icon="arrow" color="#777777" size="{{16}}"></mp-icon>
+	</view>
+<view class="sizebox"></view>
+<block wx:if="{{show_salary == 1}}">
+	<view class="main-item" bindtap="lookingMoney">
+		<view class="itemboxaaasas">
+			<van-icon name="gold-coin-o" size="25" color="#909399" />
+			<text class="main-item-name">我的工资</text>
+		</view>
+		<mp-icon icon="arrow" color="#777777" size="{{16}}"></mp-icon>
+	</view>
+	<view class="main-item" bindtap="lookingMoney1">
+		<view class="itemboxaaasas">
+		<van-icon name="bar-chart-o" size="25" color="#909399" />
+			<text class="main-item-name">工资排名</text>
+		</view>
+		<mp-icon icon="arrow" color="#777777" size="{{16}}"></mp-icon>
+	</view>
+<view class="sizebox"></view>
+</block>
+
+	<view class="main-item" bindtap="lookingMoney2">
+		<view class="itemboxaaasas">
+		<van-icon name="underway-o" size="25" color="#909399"  />
+			<text class="main-item-name">今日产量</text>
+		</view>
+		<mp-icon icon="arrow" color="#777777" size="{{16}}"></mp-icon>
+	</view>
+	<view class="main-item" bindtap="lookingMoney3">
+		<view class="itemboxaaasas">
+		<van-icon name="todo-list-o" size="25" color="#909399" />
+			<text class="main-item-name">本月产量</text>
+		</view>
+		<mp-icon icon="arrow" color="#777777" size="{{16}}"></mp-icon>
+	</view>
+	
+</view>
+
+
+<view class="vistion">
+	<text class="vistion-s">杰克股份</text>
+	<text class="vistion-s">V1.2.9</text>
+</view>

@@ -1,0 +1,25 @@
+<view class="container">
+<picker mode="date" class="pickerTime" fields="month" value="{{date}}" start="2020-01-01" end="2025-01-01" bindchange="bindDateChange">
+		<view class="picker">
+			{{date}}
+			<van-icon name="arrow-down" />
+		</view>
+		<!-- <view class="money">
+			金额: ¥ <text class="detail">{{listItem.total}}</text></view> -->
+	</picker>
+		<view class="title">
+			<text class="name">姓名</text>
+			<text class="name">名次</text>
+			<!-- <text class="name">业绩</text>
+			<text class="name">工资</text> -->
+		</view>
+	<van-empty description="暂无数据"  wx:if="{{ItemLIst.length == 0}}" />
+	<view wx:else >
+			<view class="main" wx:for="{{ItemLIst}}" wx:key="index" data-Touchid="{{item.user_id}}" bindtap="chooseItem">
+				<text class="main-item">{{item.username}}</text>
+			<text class="main-item" wx:if="{{index !== 0 && index !== 1 && index !== 2}}">{{index + 1}}</text>
+			<!-- <text class="main-item">¥ {{item.price}}</text> -->
+			<image wx:else class="sortImg main-item" mode="aspectFit" src="{{index == 0 ? 'https://jack-mes.oss-cn-hangzhou.aliyuncs.com/center/1/2020/11/8e0db57dffaf96cc8c3ad039a4b33109.png' : index == 1 ? 'https://jack-mes.oss-cn-hangzhou.aliyuncs.com/center/1/2020/11/71cf2c30412e25b6ee670321ebfed9d0.png' : index == 2 ? 'https://jack-mes.oss-cn-hangzhou.aliyuncs.com/center/1/2020/11/4ef2eb64d873151593e8d6d99fc95ffe.png' : ''}}"></image>
+		</view>
+	</view>
+</view>

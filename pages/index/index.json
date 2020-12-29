@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "my-mainItem": "../../components/firstPage/mainItem/index",
+    "my-topItem": "../../components/firstPage/topItem/index"
+  }
+}

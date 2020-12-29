@@ -1,0 +1,7 @@
+<view>
+  <picker class="form-item" bindchange="bindPickerChange" value="{{index}}" range="{{arrData}}" range-key="name" data-Touchid="{{arrData[index]}}">
+    <view class="picker-name">
+      {{title}}: <text class="picker-name-text">{{arrData[index].name}}</text>
+    </view>
+  </picker>
+</view>

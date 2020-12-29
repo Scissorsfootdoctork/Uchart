@@ -1,0 +1,47 @@
+<view class="container">
+  <van-search value="{{ value }}" background="#03A2E3" placeholder="请输入工票" use-action-slot bind:change="onChangeS"
+    bind:clear="searchClear">
+    <view slot="action" class="searchText" bind:tap="onClick">搜索</view>
+  </van-search>
+  <picker mode="date" class="pickerTime" value="{{date}}" start="2020-01-01" end="2025-01-01"
+    bindchange="bindDateChange">
+    <view class="picker">
+      {{date}}
+      <van-icon name="arrow-down" />
+    </view>
+    <view class="money">
+      数量: <text class="detail">{{ticketListLength}}</text>
+      包数: <text class="detail">{{allNum}}</text>
+      金额: <text class="detail">¥ {{ItemLIst.total}}</text>
+    </view>
+    <!-- <view class="money" wx:else>
+  </view> -->
+  </picker>
+  <van-empty description="暂无数据" wx:if="{{ItemLIst.ticketList == 0}}" />
+  <view class="wrapper" wx:else>
+    <view class="wrapper-item" wx:for="{{ItemLIst.ticketList}}" wx:key="index">
+      <view class="item">
+        <text class="item-name">{{item.ticket_no}}</text>
+        <text class="middleAll-price quhisss" wx:if="{{item.ticket_state == 1}}">未质检</text>
+        <text class="middleAll-price quhis" wx:else>已质检</text>
+      </view>
+      <view class="ticket-process" wx:for="{{item.process}}" wx:for-item="items" wx:for-key="indexs"
+        wx:key="indexs">
+        <text class="item-n1">{{items.name}}</text>
+        <!-- <view class="piceBox"> -->
+        <text class="item-nu1">x {{items.num}}</text>
+        <!-- <text class="item-money1">¥ {{items.price}}</text> -->
+        <!-- </view> -->
+      </view>
+      <view class="ticket-middleAll">
+        <text class="item-money11">{{item.process[0].create_time}}</text>
+        <view wx:if="{{item.ticket_state != 1}}">
+          合格: <text class="detail" > {{item.qualified_num}}</text>
+        </view>
+        <view>
+          金额: <text class="detail">¥ {{item.ticket_price}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

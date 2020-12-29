@@ -1,0 +1,32 @@
+<form catchsubmit="formSubmit" catchreset="formReset" class="container">
+	<view class="form-item">
+		<view class="item-name">姓名:</view>
+		<input type="text" class="item-input" bindinput="mobeil" name="name" placeholder="请输入姓名" />
+	</view>
+
+		<my-select title="部门" arrData="{{dept_data}}" bind:sendEvent="deptValue"></my-select>
+
+		<my-select title="组别" arrData="{{dept1_data}}" bind:sendEvent="dept1Value"></my-select>
+
+	<view class="form-item">
+		<view class="item-name">手机:</view>
+		<input type="number" maxlength="11" class="item-input" bindinput="mobeil" name="mobile" placeholder="请输入手机号码" />
+	</view>
+
+	<view class="form-item" wx:if="{{isShow}}">
+		<view class="item-name">短信验证:</view>
+		<input name="verify_code" data-field="mobile" class="item-input" placeholder="请输入验证码" />
+		<text class="text_code" bindtap="getCode">{{TextCode ? TextCode : '获取验证码'}}</text>
+	</view>
+
+	<view class="form-item">
+		<view class="item-name">密码:</view>
+		<input class="item-input" password type="text" name="password" placeholder="请输入密码" />
+	</view> 
+	<view class="job-select">
+		<Job-select List="{{jobList}}" bind:sendEvent="jobValue"></Job-select>
+	</view>
+	<view class="btn-area">
+		<button class="btn" formType="submit">创建员工</button>
+	</view>
+</form>

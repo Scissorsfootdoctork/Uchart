@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "mp-cells": "../../miniprogram_npm/weui-miniprogram/cells/cells",
+    "mp-cell": "../../miniprogram_npm/weui-miniprogram/cell/cell",
+    "mp-slideview": "../../miniprogram_npm/weui-miniprogram/slideview/slideview",
+    "mp-dialog": "../../miniprogram_npm/weui-miniprogram/dialog/dialog",
+    "van-empty": "@vant/weapp/empty/index",
+    "my-Inpdialog": "../../components/dialogInp/index",
+    "my-dialog": "../../components/dialog/index"
+  },
+  "navigationBarTitleText": "工票修改"
+}

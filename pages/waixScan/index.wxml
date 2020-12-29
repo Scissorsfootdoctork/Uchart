@@ -1,0 +1,59 @@
+<view class="container">
+  <view class="closerImg">
+    <view class="detail">
+      <text class="detail-name">派遣商家:</text>
+      <text class="detail-text">{{productionDetail.production.customer.name}}</text>
+      <text class="detail-name">外协工厂:</text>
+      <text class="detail-text">{{productionDetail.production.company.name}}</text>
+      <text class="detail-name">预计投产时间:</text>
+      <text class="detail-text">{{bgtime}}</text>
+      <text class="detail-name">预计交付时间:</text>
+      <text class="detail-text">{{endtime}}</text>
+    </view>
+    <image class="imgas" src="{{productionDetail.style.images.url[0]}}" mode="scaleToFill" />
+  </view>
+  <block wx:if="{{has_size == 1}}">
+
+  <view class="table">
+    <view class="colorTiele">
+      <view class="sizebox"></view>
+      <view class="colorname" wx:for="{{tableData}}" wx:key="index">{{item.color}}</view>
+    </view>
+
+      <view class="scroll">
+      <view class="sizeTiele" wx:for="{{tableData}}" wx:key="index">
+        <view class="sizename" wx:for="{{item.detail}}" wx:for-index="indexs" wx:for-item="items" wx:key="indexs"
+          wx:if="{{index == 0}}">{{items.size}}</view>
+      </view>
+      <view class="detailarea" wx:for="{{tableData}}" wx:key="index">
+        <view class="detailareaname" wx:for="{{item.detail}}" wx:for-index="insdexs" wx:for-item="items"
+          wx:key="insdexs">
+          <input type="number" name="" id="" placeholder="{{items.clothes_num}}" class="numInp" 
+            bindblur="inpConfirm" data-touchid="{{[item, items]}}" /> / {{items.num}}
+        </view>
+      </view>
+    </view>
+  </view>
+</block>
+
+  <block wx:else>
+    <view class="changeItem">
+      <text class="name12">完成数量:</text>
+      <view class="right">
+        <van-stepper input-width="60px" button-size="38px" value="{{ qualified_num }}"
+          bind:change="onChangequalified_num" min="0" max="{{ qualifiedMaxNum }}" />
+      </view>
+    </view>
+  </block>
+  <view class="changeItem">
+    <text class="name12">是否完成:</text>
+    <view class="right">
+      <switch checked="{{switch1Checked}}" bindchange="switch1Change" />
+    </view>
+  </view>
+  <view>{{stableData}}</view>
+  <view>{{obj}}</view>
+  <view class="btn-area">
+    <button class="btn" bindtap="selectedValue">提交</button>
+  </view>
+</view>

@@ -1,0 +1,37 @@
+<view>
+	<view class="search-box">
+		<van-icon name="scan" class="scanIcon" size="25px" bindtap="scanCodeIcon" />
+		<van-search value="{{ value }}" background="#03A2E3" placeholder="请输入生产单" use-action-slot bind:change="onChanges"
+		bind:clear="searchClear"
+		class="searckasas"
+		>
+		<view slot="action" class="searchText" bind:tap="onClick">搜索</view>
+	</van-search>
+	</view>
+<van-empty description="暂无数据" wx:if="{{ItemLIst.length == 0}}" />
+	<view class="wrapper" wx:else>
+		<view class="collapseWrapper" wx:for="{{ItemLIst}}" wx:key="index" bindtap="chooseItem" data-index="{{item}}">
+					<view slot="title" class="title1">
+						<view class="title-item">
+							<text class="name">工票</text>
+							<text class="name1">{{item.ticket_no}}</text>
+						</view>
+						<view class="title-item">
+							<text class="name">数量</text>
+							<text class="name1">{{item.num}}</text>
+						</view>
+						<view class="title-item">
+							<text class="name">颜色</text>
+							<text class="name1">{{item.color}}</text>
+						</view>
+						<view class="title-item">
+							<text class="name">尺码</text>
+							<text class="name1">{{item.size}}</text>
+						</view>
+					</view>
+		</view>
+		<mp-dialog title="确认删除工序" show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}">
+        <!-- <view>确认删除工序</view> -->
+    </mp-dialog>
+	</view>
+</view>

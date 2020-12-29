@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "mp-icon": "../../../miniprogram_npm/weui-miniprogram/icon/icon",
+    "mp-uploader": "../../../miniprogram_npm/weui-miniprogram/uploader/uploader",
+    "mp-cells": "../../../miniprogram_npm/weui-miniprogram/cells/cells",
+    "mp-cell": "../../../miniprogram_npm/weui-miniprogram/cell/cell",
+    "my-select": "../../../components/select/index",
+    "Job-select": "../../../components/secectJob/index"
+  },
+  "navigationBarTitleText": "信息修改"
+}

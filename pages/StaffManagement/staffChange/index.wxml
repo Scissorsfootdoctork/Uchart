@@ -1,0 +1,38 @@
+<view class="container">
+  <form catchsubmit="formSubmit">
+    <view class="page__bd changeItem">
+      <mp-cell>
+        <mp-uploader bindfail="uploadError" bindsuccess="uploadSuccess" select="{{selectFile}}" upload="{{uplaodFile}}"
+          files="{{files}}" max-count="1" title="头像上传" tips="支持拍照或选择照片"></mp-uploader>
+      </mp-cell>
+    </view>
+    <view class="changeItem nomal">
+      <text class="name">姓名:</text>
+      <view class="right">
+        <input class="weui-input" type="text" name="name" placeholder="{{name}}" />
+      </view>
+    </view>
+    <view class="changeItem nomal">
+      <text class="name">密码:</text>
+      <view class="right">
+        <input class="weui-input" name="password" password type="text" placeholder="请输入密码" />
+      </view>
+    </view>
+    <view class="changeItem nomal">
+      <text class="name">密码校验:</text>
+      <view class="right">
+        <input class="weui-input" name="password2" password type="text" placeholder="请再次输入密码" />
+      </view>
+    </view>
+
+    <my-select title="部门" arrData="{{dept_data}}" index="{{deptIndex}}" bind:sendEvent="deptValue"></my-select>
+		<my-select title="组别" arrData="{{dept1_data}}" bind:sendEvent="dept1Value"></my-select>
+    <view class="job-select">
+		<Job-select List="{{jobList}}" bind:sendEvent="jobValue"></Job-select>
+	</view>
+
+    <view class="btn-area">
+      <button class="btn" formType="submit">提交</button>
+    </view>
+  </form>
+</view>

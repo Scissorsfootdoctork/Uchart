@@ -1,0 +1,15 @@
+<view class="container">
+	<view class="title1">
+			<text class="name">生产单: <text class="name-text">{{ItemLIst.production.production_no}}</text></text>
+		</view>
+		<view class="title">
+			<text class="name">工序名</text>
+			<text class="name">工序进度</text>
+		</view>
+			<mp-slideview wx:for="{{ItemLIst.processList}}" wx:key="index" bindtap="chooseItem" buttons="{{slideButtons}}" bindbuttontap="slideButtonTap" data-Touchid="{{item}}">
+			<view class="changeDetail">
+				<view class="detailLeft">{{item.name}}</view>
+			<text class="detailright">{{item.doneNum}} / {{item.num}}</text>
+			</view>
+		</mp-slideview>
+</view>

@@ -1,0 +1,32 @@
+<view class="container">
+	<view class="toparea">
+		<view class="avatar">
+			<image class="img" mode="scaleToFill" src="https://jack-mes.oss-cn-hangzhou.aliyuncs.com/center/1/2020/11/8368d252861fd3eacf42fe1664d495bf.png"></image>
+		</view>
+	</view>
+	<form catchsubmit="formSubmit" catchreset="formReset">
+		<view class="main">
+			<view class="main-item" bindtap="lookingMoney">
+				<input class="weui-input" maxlength="11" type="number" name="mobile" placeholder="请输入手机号" />
+			</view>
+			<view class="main-item" bindtap="lookingMoney">
+				<input class="weui-input" password type="text" name="password" placeholder="请输入密码" />
+			</view>
+			<view class="tag">没有账号密码，请联系管理员</view>
+		</view>
+		<view class="btn-area">
+			<button class="btn" open-type="getUserInfo" formType="submit">登录</button>
+		</view>
+	</form>
+	<view class="getSure"  wx:if="{{scopeButton}}">
+<view class="toparea">
+		<view class="avatar">
+			<image class="img" mode="aspectFit" src="https://jack-mes.oss-cn-hangzhou.aliyuncs.com/center/1/2020/11/8368d252861fd3eacf42fe1664d495bf.png"></image>
+		</view>
+	</view>
+		<text class="tagsna">
+			授权后即可使用【电子工票】小程序提供的服务
+		</text>
+		<button open-type="getUserInfo" class="btn" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+	</view>
+</view>

@@ -1,0 +1,13 @@
+.weui-cell{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--weui-FG-3);
+  padding: 20rpx 40rpx;
+}
+
+.na{
+  display: flex;
+  justify-content: center;
+  padding-top: 200rpx;
+  color: #999999;
+}

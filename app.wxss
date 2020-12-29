@@ -1,0 +1,12 @@
+@import '/miniprogram_npm/weui-miniprogram/weui-wxss/dist/style/weui.wxss';
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  background-color: rgb(21, 150, 219);
+  color: #ffffff;
+}
+
+.job-select{
+	height: 290rpx;
+  overflow: hidden;
+	overflow-y: scroll;
+}

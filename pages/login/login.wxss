@@ -1,0 +1,83 @@
+.container {
+	width: 100%;
+}
+
+.toparea {
+	width: 100%;
+	height: 280rpx;
+	/* background-image: linear-gradient(170deg, #42a5f5 400rpx, #ffffff 400rpx); */
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.avatar {
+	width: 100%;
+	margin-top: 100rpx;
+}
+
+.img {
+	margin: auto;
+	width: 600rpx;
+	height: 100rpx;
+	display: block;
+}
+
+.editMsg {
+	letter-spacing: 5rpx;
+	color: #606266;
+}
+
+.main {
+	padding: 40rpx;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.main-item {
+	width: 100%;
+	margin: 40rpx 0;
+	background-color: rgb(246, 246, 246);
+	padding: 30rpx 0;
+}
+
+.weui-input{
+	margin: 0 20rpx;
+}
+
+.tag{
+	color: rgb(201, 201, 201);
+}
+
+.btn-area{
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0 40rpx;
+}
+
+.btn{
+	background-color: rgb(21, 150, 219);
+	color: white;
+	letter-spacing: 10rpx;
+}
+
+.getSure{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: white;
+	z-index: 99;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.tagsna{
+	font-size: 26rpx;
+	padding: 80rpx;
+	color: #777777;
+}

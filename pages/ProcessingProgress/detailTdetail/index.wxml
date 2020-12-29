@@ -1,0 +1,17 @@
+<view class="container">
+	<view class="title">
+		<text class="name">工序名</text>
+		<text class="name">操作人</text>
+		<text class="name">完成数量</text>
+	</view>
+	<van-empty description="暂无数据" wx:if="{{ItemLIst.length == 0}}" />
+	<view wx:else>
+		<view wx:for="{{ItemLIst}}" wx:key="index">
+		<view class="changeDetail">
+			<view class="detailLeft">{{item.process_name}}</view>
+			<text class="detailright">{{item.username}}</text>
+			<text class="detailright">{{item.num}}</text>
+		</view>
+	</view>
+	</view>
+</view>

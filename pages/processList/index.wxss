@@ -1,0 +1,59 @@
+.collapseWrapper {
+	padding: 20rpx;
+	border-bottom: 1px solid var(--weui-FG-3);
+}
+
+.title1{
+	padding: 20rpx;
+	display: flex;
+	flex-direction: column;
+}
+
+.title-item{
+	flex: 1;
+	display: flex;
+	justify-content: space-between;
+}
+
+.name{
+	color: #777777;
+}
+
+.name1{
+	color: #303133;
+}
+
+.title{
+	display: flex;
+	padding: 10rpx;
+	margin-bottom: 10rpx;
+	justify-content: space-between;
+	color:#303133;
+}
+
+.main {
+	display: flex;
+	align-items: center;
+	padding: 20rpx;
+	justify-content: space-between;
+	color:#606266;
+}
+
+.searchText{
+	color: white;
+	font-size: 34rpx;
+}
+
+.search-box{
+	display: flex;
+	background-color: #03A2E3;
+}
+
+.searckasas{
+	flex: 1;
+}
+
+.scanIcon{
+	color: white;
+	margin-left: 20rpx;
+}

@@ -1,0 +1,46 @@
+<view class="container">
+	<view class="top-msg">
+		<view class="title1">
+			<text class="name">生产单:</text>
+			<text class="detail">{{processList.ticket.production_no}}</text>
+		</view>
+		<view class="title2">
+			<text class="name">工票号:</text>
+			<text class="detail">{{processList.ticket.ticket_no}}</text>
+		</view>
+		<view class="title3">
+			<text class="name">颜色:</text>
+			<text class="detail">{{processList.ticket.color}}</text>
+			<text class="name">尺码:</text>
+			<text class="detail">{{processList.ticket.size}}</text>
+		</view>
+	</view>
+	<view class="midele-title">
+		请选择工序
+	</view>
+	<view class="senceendtitle">
+		<text class="sencendT">工序名</text>
+		<text class="sencendT">数量</text>
+		<text class="sencendT">员工</text>
+		<text class="sencendT">操作</text>
+	</view>
+	<van-empty description="暂无数据" wx:if="{{processList.process.length == 0}}" />
+	<view wx:else>
+
+		<view class="weui-cells">
+			<mp-slideview buttons="{{slideButtons}}" bindbuttontap="chooseEdit" data-Touchid="{{item}}"
+				wx:for="{{processList.process}}" wx:key="index">
+				<view class="changeDetail">
+					<view class="detailLeft">{{item.name}}</view>
+					<view class="detailmiddle">{{item.num}}</view>
+					<view class="detailright">{{item.username}}</view>
+					<view class="detailright asas" bindtap="change" data-Touchid="{{item}}">修改</view>
+				</view>
+			</mp-slideview>
+		</view>
+	</view>
+	<my-Inpdialog title="请输入数量" showDialog="{{changeShow}}" bind:sendEvent="numChange" num="{{num}}"></my-Inpdialog>
+	<my-dialog title="请确认删除" showDialog="{{delShow}}" bind:sendEvent="delChange"></my-dialog>
+	<!-- <mp-dialog title="" show="{{showOneButtonDialog}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}">
+	</mp-dialog> -->
+</view>

@@ -1,0 +1,12 @@
+<view class="top">
+		<view class="topitem"
+		 wx:for="{{topItems}}"
+			wx:key="index"
+			 data-Touchid="{{item.id}}"
+				bindtap="topTab"
+				wx:if="{{!item.show_salary}}"
+				>
+			<image class="itemImg" src="{{item.url}}"></image>
+			<text class="title">{{item.title}}</text>
+		</view>
+	</view>

@@ -1,0 +1,3 @@
+<mp-dialog title="{{title}}" show="{{showDialog}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}">
+  <input type="number" placeholder="{{num}}" bindinput="confirmNum"></input>
+</mp-dialog>

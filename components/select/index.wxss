@@ -1,0 +1,18 @@
+.form-item {
+	width: 100%;
+	padding: 40rpx;
+	/* margin: 40rpx 0; */
+	border-bottom: 1px solid var(--weui-FG-3);
+	display: flex;
+	box-sizing: border-box;
+}
+
+.picker-name{
+	width: 100%;
+	color: #909199;
+}
+
+.picker-name-text{
+	color: #303133;
+	margin-left: 120rpx;
+}

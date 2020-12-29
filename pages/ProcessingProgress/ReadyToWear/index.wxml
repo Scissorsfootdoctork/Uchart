@@ -1,0 +1,36 @@
+<view class="container">
+  <view class="closerImg">
+    <view class="detail">
+      <text class="detail-name">下单商家:</text>
+      <text class="detail-text">{{productionDetail.production.order_company.name}}</text>
+      <text class="detail-name">生产工厂:</text>
+      <text class="detail-text">{{productionDetail.production.company.name}}</text>
+      <text class="detail-name">预计投产时间:</text>
+      <text class="detail-text">{{bgtime}}</text>
+      <text class="detail-name">预计交付时间:</text>
+      <text class="detail-text">{{endtime}}</text>
+    </view>
+    <image class="imgas" src="{{productionDetail.production.images}}" mode="scaleToFill" />
+  </view>
+
+  <view class="table">
+
+    <view class="colorTiele">
+      <view class="sizebox"></view>
+      <view class="colorname" wx:for="{{productionDetail.info}}" wx:key="index">{{item.color}}</view>
+    </view>
+
+    <view class="scroll">
+      <view class="sizeTiele" wx:for="{{productionDetail.info}}" wx:key="index">
+      <view class="sizename" wx:for="{{item.detail}}" wx:for-index="indexs" wx:for-item="items" wx:key="indexs"
+      wx:if="{{index == 0}}" >{{items.size}}</view>
+    </view>
+    <view class="detailarea" wx:for="{{productionDetail.info}}" wx:key="index">
+      <view class="detailareaname" wx:for="{{item.detail}}" wx:for-index="insdexs" wx:for-item="items" wx:key="insdexs">
+       {{items.clothes_num}}/
+       <text class="allNumas">{{items.num}}</text>
+      </view>
+    </view>
+    </view>
+  </view>
+</view>

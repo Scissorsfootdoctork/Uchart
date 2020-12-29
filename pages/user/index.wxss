@@ -1,0 +1,101 @@
+.container{
+	width: 100%;
+	position: relative;
+}
+
+.wrapper{
+	width: 100%;
+	padding: 30rpx;
+	display: flex;
+	box-sizing: border-box;
+	border-bottom: 1px solid var(--weui-FG-3);
+}
+
+.avatar{
+	width: 135rpx;
+	height: 135rpx;
+	border-radius: 10rpx;
+	overflow: hidden;
+}
+
+.avatar-img{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.detail{
+	flex: 1;
+	padding: 0 40rpx;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+}
+
+.name{
+	color: #303133;
+	font-size: 30rpx;
+	font-weight: bold;
+}
+
+.phone{
+	color: #606266;
+	font-size: 26rpx;
+}
+
+.change{
+	color: #777777;
+	font-size: 26rpx;
+}
+
+.main {
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.sizebox {
+	background-color: rgb(232, 232, 232);
+	height: 15rpx;
+}
+
+.main-item {
+	display: flex;
+	justify-content: space-between;
+	padding: 30rpx;
+	border-bottom: 1px solid var(--weui-FG-3);
+}
+
+.itemboxaaasas{
+	display: flex;
+}
+
+.main-item-name {
+	margin-left: 15rpx;
+	display: block;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #303133;
+}
+
+.vistion{
+	box-sizing: border-box;
+	position: absolute;
+	bottom: 0rpx;
+	right: 0rpx;
+	width:100%;
+	padding: 20rpx;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 22rpx;
+	color: #777777;
+}
+
+.oiyui{
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}

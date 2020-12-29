@@ -1,0 +1,6 @@
+<view class="container">
+	<my-topItem topItems="{{topItems}}" bind:sendEvent="topItemSeleted"></my-topItem>
+	<view class="sizebox"></view>
+	<my-mainItem itemList="{{mainItems}}" config="{{config}}" moneyData="{{moneyData}}" bind:sendEvent="mainItemSeleted">
+	</my-mainItem>
+</view>

@@ -1,0 +1,150 @@
+.container {
+	width: 100%;
+	box-sizing: border-box;
+	position: relative;
+}
+
+.pickerTime{
+	color: #303133;
+	font-size: 32rpx;
+	padding:30rpx;
+	background-color: rgb(242, 242, 242);
+	border-bottom: 1px solid var(--weui-FG-3);
+}
+
+.picker{
+	display: flex;
+	align-items: center;
+}
+
+.money{
+	color: rgb(154, 154, 154);
+	font-weight: normal;
+	margin-top: 10rpx;
+	color: #777777;
+}
+
+.detail{
+	color: #303133;
+	font-weight: bold;
+}
+
+.top {
+	padding: 20rpx 0;
+	color: #606266;
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid var(--weui-FG-3);
+	justify-content: space-between;
+	background-color: #ffffff;
+	position: sticky;
+	top: 0;
+	left: 0;
+}
+
+
+
+.listItem {
+	width: 100%;
+	/* border-bottom: 1px solid var(--weui-FG-3); */
+}
+
+.money-detail{
+	padding:30rpx;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid var(--weui-FG-3);
+}
+
+.money-detail-time{
+	display: flex;
+	align-items: center;
+}
+.detail-right{
+	display: flex;
+	flex-direction: column;
+}
+
+.detail-img{
+	width: 80rpx;
+	height: 80rpx;
+	display: block;
+	margin-right: 20rpx;
+}
+.time {
+	color: #303133;
+	font-size: 32rpx;
+}
+
+.orderId{
+	color: rgb(154, 154, 154);
+	margin-top: 10rpx;
+}
+
+.money-detail-price{
+	font-size: 38rpx;
+	font-weight: bold;
+}
+
+.listItem-top{
+	padding: 20rpx 0;
+	display: flex;
+	justify-content: space-between;
+	font-size: 40rpx;
+	color: #909399;
+	border-bottom: 1px solid var(--weui-FG-3);
+}
+
+.listItem-main{
+	width: 100%;
+}
+
+.listItem-main-wrapper{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding: 25rpx;
+	box-sizing: border-box;
+	color: #606266;
+	border-bottom: 1px solid var(--weui-FG-3);
+}
+
+.listItem-main-wrapper:last-child{
+	border-bottom: non;
+}
+
+.listItem-main-wrapper-left{
+	font-size: 42rpx;
+}
+
+.listItem-main-wrapper-left-text{
+	font-size: 33rpx;
+	color: #303133;
+}
+
+.listItem-main-wrapper-right{
+	font-size: 28rpx;
+}
+
+.listItem-main-wrapper-right-text{
+	font-size: 28rpx;
+	color: #F56C6C;
+	padding: 0 10rpx;
+}
+
+.listBottom{
+	padding: 10rpx 0;
+	text-align: right;
+	font-size: 32rpx;
+	color: #303133;
+	margin-bottom: 50rpx;
+	border-bottom: 1px solid var(--weui-FG-3);
+
+}
+
+.thisOrderAll{
+	font-size: 45rpx;
+	color: #F56C6C;
+	padding: 0 10rpx;
+
+}

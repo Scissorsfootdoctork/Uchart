@@ -1,0 +1,28 @@
+<view class="container">
+		<picker mode="date" class="pickerTime" fields="month" value="{{date}}" start="2020-01-01" end="2025-01-01" bindchange="bindDateChange">
+		<view class="picker">
+			{{date}}
+			<van-icon name="arrow-down" />
+		</view>
+		<view class="money">
+			金额: <text class="detail">¥ {{total}}</text></view>
+	</picker>
+
+	<van-empty description="暂无数据"  wx:if="{{listItem.list.length == 0}}" />
+
+	<view class="listItem" wx:else>
+
+		<view class="money-detail"  wx:for="{{listItem}}" wx:for-index="index" wx:key="index1" 
+		bindtap="chooseItem" data-touchid="{{index}}">
+			<view class="money-detail-time">
+			 <!-- <image class="detail-img" mode="aspectFit" src="./../../../static/images/xz.png"></image> -->
+			<view class="detail-right">
+			<text class="time">{{index}}</text>
+			<text class="orderId">{{listItem.production_no}}</text>
+			</view>
+			
+			</view>
+			<view class="money-detail-price">¥ {{item}}</view>
+		</view>
+	</view>
+</view>

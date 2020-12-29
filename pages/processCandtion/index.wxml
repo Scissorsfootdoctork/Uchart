@@ -1,0 +1,25 @@
+<view class="container">
+	<view class="search-box">
+		<van-icon name="scan" class="scanIcon" size="25px" bindtap="scanCodeIcon" />
+		<van-search value="{{ value }}" background="#03A2E3" placeholder="请输入生产单" use-action-slot bind:change="onChanges"
+		bind:clear="searchClear"
+		class="searckasas"
+		>
+		<view slot="action" class="searchText" bind:tap="onClick">搜索</view>
+	</van-search>
+	</view>
+	
+	<view class="title">
+		<text class="name">生产单</text>
+		<text class="name1">总数</text>
+	</view>
+	<van-empty description="暂无数据" wx:if="{{ItemLIst.length == 0}}" />
+	<view wx:else>
+		<view class="proction-list" wx:for="{{ItemLIst}}" wx:key="index" data-Touchid="{{item}}" data-index="{{index}}" bindtap="chooseItem">
+			<view class="lineRow">
+				<text class="main-item"> {{item.production_no}} </text>
+				<text class="main-item1"> {{item.qualified_num}} / {{item.num}} </text>
+			</view>
+		</view>
+	</view>
+</view>

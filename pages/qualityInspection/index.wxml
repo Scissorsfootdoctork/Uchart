@@ -1,0 +1,63 @@
+<view class="container">
+	<view class="top-msg">
+		<view class="title1">
+			<text class="name">生产单:</text>
+			<text class="detail">{{itemList.ticket.production_no}}</text>
+		</view>
+		<view class="title2">
+			<text class="name">工票号:</text>
+			<text class="detail">{{itemList.ticket.ticket_no}}</text>
+		</view>
+		<view class="title3">
+			<text class="name">颜 色:</text>
+			<text class="detail">{{itemList.ticket.color}}</text>
+			<text class="name">尺 码:</text>
+			<text class="detail">{{itemList.ticket.size}}</text>
+			<text class="name">数量:</text>
+			<text class="detail">{{itemList.ticket.num}}</text>
+		</view>
+	</view>
+	<view class="midele-title">
+		<switch checked="{{switch1Checked}}" bindchange="switch1Change" />
+		<text class="title-namw">{{switch1Checked ? '选择工序质检' : '整体质检'}}</text>
+		<block wx:if="{{switch1Checked}}">
+			<view class="numTiele">
+				<text class="Num1 Num2">合格</text>
+				<text class="Num1">不合格</text>
+			</view>
+		</block>
+	</view>
+	<view class="scroll-wrapper">
+		<block wx:if="{{switch1Checked}}">
+			<view class="process" wx:for="{{itemList.process}}" wx:key="index">
+				<view class="processName">{{item.name}}</view>
+				<view class="Name">{{item.username}}</view>
+				<view class="okNum">
+					<input class="weui-input" type="number" value="{{item.num}}" bindblur="qualifiedBlur"
+						data-Touchid="{{item}}" />
+				</view>
+				<view class="feilNum">
+					<input class="weui-input" type="number" value="{{item.failed_num}}" bindblur="failedBlur"
+						data-Touchid="{{item}}" />
+				</view>
+			</view>
+		</block>
+		<view class="changeItem">
+			<text class="name12">合格数:</text>
+			<view class="right">
+				<van-stepper input-width="60px" button-size="38px" value="{{ qualified_num }}"
+					bind:change="onChangequalified_num" min="0" max="{{ qualifiedMaxNum }}" />
+			</view>
+		</view>
+		<view class="changeItem">
+			<text class="name12">不合格数:</text>
+			<view class="right">
+				<van-stepper input-width="60px" button-size="38px" value="{{ failed_num }}" bind:change="onChangefailed_num"
+					min="0" max="{{ faileMaxNum }}" />
+			</view>
+		</view>
+	</view>
+	<view class="btn-area">
+		<button class="btn" bindtap="selectedValue">提交</button>
+	</view>
+</view>

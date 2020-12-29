@@ -1,0 +1,139 @@
+.container{
+	width: 100%;
+	position: relative;
+}
+
+.pickerTime{
+	color: #303133;
+	font-size: 32rpx;
+	padding:30rpx;
+	background-color: rgb(242, 242, 242);
+	border-bottom: 1px solid var(--weui-FG-3);
+}
+
+.picker{
+	display: flex;
+	align-items: center;
+}
+
+.money{
+	color: rgb(154, 154, 154);
+	font-weight: normal;
+	margin-top: 10rpx;
+	color: #777777;
+}
+
+.detail{
+	color: #303133;
+	font-weight: bold;
+}
+.searchText{
+	color: white;
+}
+.picker{
+	display: flex;
+	align-items: center;
+}
+
+.picker-right{
+margin-top: 10rpx;
+font-size: 26rpx;
+}
+
+.wrapper{
+	width: 100%;
+}
+
+.wrapper-item{
+	box-sizing: border-box;
+	width: 100%;
+	padding: 20rpx;
+	margin-bottom: 30rpx;
+	border-bottom: 1px solid var(--weui-FG-3);
+}
+.item-title{
+	padding-bottom: 10rpx;
+}
+.item-detail{
+	font-size: 36rpx;
+	color: #303133;
+	font-weight: bold;
+}
+
+.item{
+	flex: 1;
+	padding: 10rpx 0;
+	display: flex;
+	justify-content: space-between;
+	color: #777777;
+	border-bottom: 1px solid var(--weui-FG-3);
+
+}
+
+.item-money {
+	color: #303133;
+	font-size: 37rpx;
+	font-weight: bold;
+}
+
+
+.detail-name{
+	color: #777777;
+	font-weight: normal;
+}
+
+.ticket-process{
+	padding: 10rpx 40rpx;
+	display: flex;
+	justify-content: space-between;
+}
+
+.item-n1, .item-nu1, .item-money1 {
+	flex: 1;
+	text-align: center;
+}
+.item-n1{
+	text-align: left;
+	color: #777777;
+}
+.item-nu1{
+	text-align: right;
+	color: #777777;
+}
+.item-money1 {
+	color: #303133;
+	text-align: right;
+}
+.piceBox{
+	display: flex;
+	flex-direction: column;
+	text-align: right;
+}
+
+.ticket-middleAll{
+	text-align: right;
+	padding: 20rpx 0 0 0;
+	color: #777777;
+	border-top: 1px solid var(--weui-FG-3);
+	display: flex;
+	justify-content: space-between;
+}
+
+.middleAll-price{ 
+	color: #303133;
+	font-weight: bold;
+	margin-left: 20rpx;
+}
+
+.item-money11{
+	color: #777777;
+}
+
+.quhis {
+	color: #67C23A;
+}
+
+.quhisss{
+	color: #F56C6C;
+}
+

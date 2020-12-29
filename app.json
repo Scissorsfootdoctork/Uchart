@@ -1,0 +1,72 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/management/index",
+    "pages/seletedProcess/index",
+    "pages/statisticsMoney/index",
+    "pages/todayYield/index",
+    "pages/moneySort/index",
+    "pages/changeProcess/index",
+    "pages/ProcessingProgress/index",
+    "pages/ProcessingProgress/orderDetail/index",
+    "pages/ProcessingProgress/detailTdetail/index",
+    "pages/processList/index",
+    "pages/StaffManagement/index",
+    "pages/user/index",
+    "pages/user/changeDetail/index",
+    "pages/StaffManagement/addStaff/index",
+    "pages/qualityInspection/index",
+    "pages/processCandtion/index",
+    "pages/statisticsMoney/detailMoney/index",
+    "pages/monthMoney/index",
+    "pages/monthyield/index",
+    "pages/StaffManagement/staffChange/index",
+    "pages/isQualityInspection/index",
+    "pages/isQualityInspection/detailIndexPage/index",
+    "pages/ProcessingProgress/ReadyToWear/index",
+    "pages/singlrSeletedProcess/index",
+    "pages/waixScan/index",
+    "pages/ProcessingProgress/wxDetail/index"
+  ],
+  "tabBar": {
+    "borderStyle": "black",
+    "color": "#000000",
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "selectedColor": "#1296db",
+        "iconPath": "./static/images/shouye.png",
+        "selectedIconPath": "./static/images/shouyes.png"
+      },
+      {
+        "pagePath": "pages/management/index",
+        "text": "管理",
+        "selectedColor": "#1296db",
+        "iconPath": "./static/images/guanli.png",
+        "selectedIconPath": "./static/images/guanlis.png"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "text": "我的",
+        "selectedColor": "#1296db",
+        "iconPath": "./static/images/wode.png",
+        "selectedIconPath": "./static/images/wodes.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#03A2E3",
+    "navigationBarTitleText": "优产工票",
+    "navigationBarTextStyle": "white",
+    "onReachBottomDistance": 300
+  },
+  "sitemapLocation": "sitemap.json"
+}

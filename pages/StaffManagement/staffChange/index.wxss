@@ -1,0 +1,57 @@
+.container{
+	width: 100%;
+}
+.right, .changeItem{
+	display: flex;
+	align-items: center;
+}
+.changeItem{
+	padding: 20rpx 40rpx;
+	justify-content: space-between;
+	border-bottom: 1px solid var(--weui-FG-3);
+}
+
+.right{
+	flex: 1;
+}
+
+.name{
+	width: 200rpx;
+	font-size: 30rpx;
+	color: #888888;
+}
+
+.imgs{
+	width: 150rpx;
+	height: 150rpx;
+	display: block;
+	margin: 0 20rpx;
+}
+
+.btn-area{
+	margin: 40rpx 0;
+}
+
+
+.sizebox{
+ padding: 0 20rpx;
+}
+
+.textareaS{
+	width: 1rpx;
+	height: 1rpx;
+}
+
+.btn-area{
+	padding: 0 30rpx;
+}
+
+.picker{
+	color: #777777;
+}
+
+.btn{
+	background-color: #03A2E3;
+	color: white;
+	letter-spacing: 10rpx;
+}

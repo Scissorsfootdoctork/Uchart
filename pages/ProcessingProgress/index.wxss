@@ -1,0 +1,129 @@
+/* pages/moneySort/index.wxss */
+.container {
+	width: 100%;
+	position: relative;
+}
+
+.title {
+	padding: 30rpx 0;
+	display: flex;
+	justify-content: space-evenly;
+	color: #303133;
+	background-color: #F2F6FC;
+	border-bottom: 1px solid var(--weui-FG-3);
+	position: sticky;
+	top: 0;
+	left: 0;
+}
+
+.name {
+	flex: 1;
+	text-align: center;
+	justify-content: center;
+}
+
+.name1 {
+	width: 80rpx;
+	padding-left: 30rpx;
+}
+
+.name11 {
+	width: 80rpx;
+	padding-left: 10rpx;
+}
+
+.main-item {
+	flex: 1;
+	text-align: center;
+	padding-left: 20rpx;
+}
+
+.item1 {
+	text-align: left;
+}
+
+.item11 {
+	width: 120rpx;
+}
+
+.item111 {
+	color: #67C23A;
+	width: 120rpx;
+	margin-left: 35rpx;
+}
+
+.main-item-img {
+	font-size: 0;
+	width: 100rpx;
+	height: 100rpx;
+}
+
+.lineRow {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.axxsasa {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.axxsasa11 {
+	width: 60rpx;
+	height: 60rpx;
+	border-radius: 50%;
+	overflow: hidden;
+	background-color: rgb(21, 150, 219);
+	color: white;
+	text-align: center;
+	line-height: 60rpx;
+	font-size: 22rpx;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04)
+}
+
+.van-steps {
+	flex: 1;
+}
+
+.searchText {
+	color: white;
+	font-size: 34rpx;
+}
+
+.popupContainer{
+	width: 100%;
+	box-sizing: border-box;
+	padding: 40rpx;
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid var(--weui-FG-3);
+}
+
+.popupContainer:last-child{
+	padding-bottom: 40rpx;
+}
+
+.ceocle{
+	width: 8rpx;
+	height: 8rpx;
+	overflow: hidden;
+	border-radius: 50%;
+	background-color: #999999;
+}
+.wxWrapper{
+	text-align: center;
+}
+.Popupdetail{
+	color: #888888;
+	font-size: 34rpx;
+	margin-left: 40rpx;
+}
+
+.detail-text{
+	flex: 1;
+	text-align: right;
+	font-weight: bold;
+}
