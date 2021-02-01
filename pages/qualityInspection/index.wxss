@@ -89,7 +89,8 @@
 	border-top: 1px solid var(--weui-FG-3);
 	box-sizing: border-box;
 	width: 100%;
-	padding: 20rpx 40rpx;
+	padding: 20rpx;
+	height: 137rpx;
 }
 
 

@@ -62,7 +62,7 @@ Page({
   },
 
   onLoad: function (options) {
-    !!options.ticket ? options.ticket : options.ticket = 'CJ00062-00007'
+    !!options.ticket ? options.ticket : options.ticket = 'CJ00069-00017'
     this.setData({
       ticket_no: options.ticket
     })

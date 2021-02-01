@@ -13,6 +13,8 @@
 			<text class="detail">{{processList.ticket.color}}</text>
 			<text class="name">尺码:</text>
 			<text class="detail">{{processList.ticket.size}}</text>
+			<text class="name">数量:</text>
+			<text class="detail">{{processList.ticket.num}}</text>
 		</view>
 	</view>
 	<view class="midele-title">

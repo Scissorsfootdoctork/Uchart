@@ -7,7 +7,8 @@
     "van-search": "@vant/weapp/search/index",
     "van-empty": "@vant/weapp/empty/index",
     "van-icon": "@vant/weapp/icon/index",
-    "mp-dialog": "../../miniprogram_npm/weui-miniprogram/dialog/dialog"
+    "mp-dialog": "../../miniprogram_npm/weui-miniprogram/dialog/dialog",
+    "my-vrsion": "../../components/viersion/index"
   },
   "navigationBarTitleText": "员工管理"
 }

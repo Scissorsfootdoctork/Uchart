@@ -6,9 +6,9 @@
       <text class="detail-name">生产工厂:</text>
       <text class="detail-text">{{productionDetail.production.company.name}}</text>
       <text class="detail-name">预计投产时间:</text>
-      <text class="detail-text">{{bgtime}}</text>
+      <text class="detail-text">{{ formatTime.getDateTime(productionDetail.production.bg_time)}}</text>
       <text class="detail-name">预计交付时间:</text>
-      <text class="detail-text">{{endtime}}</text>
+      <text class="detail-text">{{formatTime.getDateTime(productionDetail.production.end_time)}}</text>
     </view>
     <image class="imgas" src="{{productionDetail.production.images}}" mode="scaleToFill" />
   </view>
@@ -34,3 +34,5 @@
     </view>
   </view>
 </view>
+
+<wxs src="../../../wxs/formatTime.wxs" module="formatTime"></wxs>

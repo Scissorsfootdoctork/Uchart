@@ -13,6 +13,8 @@
 			<text class="detail">{{itemList.ticket.color}}</text>
 			<text class="name">尺码:</text>
 			<text class="detail">{{itemList.ticket.size}}</text>
+			<text class="name">数量:</text>
+			<text class="detail">{{itemList.ticket.num}}</text>
 		</view>
 	</view>
 	<view class="midele-title">

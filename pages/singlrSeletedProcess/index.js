@@ -71,7 +71,6 @@ Page({
         type: 'single'
       }
     }
-    console.log(obj)
     HttpRequeat(obj).then(res => {
       if (res.code == 1) {
         setTimeout(() => {
@@ -82,7 +81,6 @@ Page({
         return
       }
       this.setData({
-
         itemList: res.data
       })
     })

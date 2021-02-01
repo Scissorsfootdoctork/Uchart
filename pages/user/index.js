@@ -2,14 +2,13 @@ import HttpRequeat from '../../utils/Http'
 
 Page({
 	data: {
-		pageData: null,
-		show_salary: null
+		user: null
 	},
 
 	onLoad() {
-		const config = wx.getStorageSync('config')
+		const user = wx.getStorageSync('user')
 		this.setData({
-			show_salary: config.show_salary
+			user
 		})
 	},
 
@@ -30,30 +29,34 @@ Page({
 		})
 	},
 
-	lookingMoney() {
-		wx.navigateTo({
-			url: `/pages/statisticsMoney/index`,
-		})
+	chooseItem(e) {
+		const config = e.currentTarget.dataset.touchid
+		switch (Number(config.purview_id)) {
+			case 26:
+				wx.navigateTo({
+					url: `${config.url}?user_id=${wx.getStorageSync('user_id')}`,
+				})
+				break;
+			case 27:
+				wx.navigateTo({
+					url: config.url,
+				})
+				break;
+			case 28:
+				wx.navigateTo({
+					url: config.url,
+				})
+				break;
+			case 29:
+				wx.navigateTo({
+					url: config.url,
+				})
+				break;
+			case 30:
+				wx.navigateTo({
+					url: config.url,
+				})
+				break;
+		}
 	},
-	lookingMoney1() {
-		wx.navigateTo({
-			url: `/pages/moneySort/index`,
-		})
-	},
-	lookingMoney2() {
-		wx.navigateTo({
-			url: `/pages/todayYield/index`,
-		})
-	},
-	lookingMoney3() {
-		wx.navigateTo({
-			url: `/pages/monthyield/index`,
-		})
-	},
-
-	changeDetail() {
-		wx.navigateTo({
-			url: `/pages/user/changeDetail/index?user_id=${this.data.pageData.user_id}`,
-		})
-	}
 })

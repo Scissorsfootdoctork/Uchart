@@ -33,9 +33,9 @@
 				<!-- </view> -->
 			</view>
 			<view class="ticket-middleAll">
-				<text class="item-money11">{{item.process[0].create_time}}</text>
+				<text class="item-money11"></text>
 				<view>
-				小计:<text class="middleAll-price">{{item.ticket_num}}</text> 件
+				<text class="middleAll-price">{{item.process[0].create_time}}</text>
 				</view>				
 				<!-- 金额: <text class="detail">¥ {{ItemLIst.total}}</text> -->
 			</view>

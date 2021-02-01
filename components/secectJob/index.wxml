@@ -1,4 +1,4 @@
-<checkbox-group bindchange="checkboxChange">
+<checkbox-group bindchange="checkboxChange" bindtap="chooseItem">
   <label class="weui-cell weui-check__label" wx:for="{{List}}" wx:key="index">
     <view class="weui-cell__bd">{{item.name}}</view>
     <view class="weui-cell__hd">

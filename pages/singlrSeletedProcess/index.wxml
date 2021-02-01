@@ -13,6 +13,8 @@
 			<text class="detail">{{itemList.ticket.color}}</text>
 			<text class="name">尺码:</text>
 			<text class="detail">{{itemList.ticket.size}}</text>
+			<text class="name">数量:</text>
+			<text class="detail">{{itemList.ticket.num}}</text>
 		</view>
 	</view>
 	<view class="midele-title">
@@ -22,9 +24,9 @@
 		<checkbox-group bindchange="checkboxChange">
 			<label class="labelItem" wx:for="{{itemList.process}}" wx:key="index">
 				<view class="label-item">{{item.name}}</view>
-				<van-stepper input-width="60px" button-size="38px" value="{{ itemList.ticket.num }}"
+				<van-stepper input-width="52px" button-size="30px" value="{{ itemList.ticket.num }}"
 					catch:change="onChangequalified_num" min="0" max="{{ itemList.ticket.num }}" data-Touchid="{{item}}" />
-				<view class="label-item right">
+				<view class="right">
 					<checkbox value="{{item.process_id}}" class="checkaa" color="#ffffff" />
 				</view>
 			</label>

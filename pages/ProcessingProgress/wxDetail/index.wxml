@@ -8,17 +8,24 @@
         </image>
       </view>
       <view class="detail">
-        <view class="name">外协工序: {{item.delegated_cate ? item.delegated_cate : '未填写'}}</view>
-        <view class="phone">外协数量: {{item.num ? item.num : '0'}}
+        <view class="phone">数量: <text class="phone-detail">{{item.num ? item.num : '0'}}</text>
         </view>
-        <view class="phone">验收数量: {{item.qualified_num ? item.qualified_num : '0'}}
+        <view class="phone">验收: <text class="phone-detail">{{item.qualified_num ? item.qualified_num : '0'}}</text>
         </view>
-        <view class="phone">外协公司: {{item.production.company.name ? item.production.company.name : '未知'}}
+        <view class="phone">公司: <text
+            class="phone-detail">{{item.production.company.name ? item.production.company.name : '未知'}}</text>
+        </view>
+        <view class="phone">截止时间: <text class="phone-detail">{{item.over_time ? formatTime.getDateTime(item.over_time) : '未知'}}</text>
         </view>
       </view>
       <view class="editBox">
-			<text class="{{item.state == 1 ? 'state1' : item.state == 2 ? 'state2' : item.state == 3 ? 'state3' : 'state4'}}" bindtap="chooseItem" data-Touchid="{{item}}">{{item.state == 1 ? '已创建' : item.state == 2 ? '制作中' : item.state == 3 ? '已完成' : '未知'}}</text>
-			</view>
+        <text
+          class="{{item.state == 1 ? 'state1' : item.state == 2 ? 'state2' : item.state == 3 ? 'state3' : 'state4'}}"
+          bindtap="chooseItem"
+          data-Touchid="{{item}}">{{item.state == 1 ? '已创建' : item.state == 2 ? '任务进行中' : item.state == 3 ? '已完成' : '未知'}}</text>
+      </view>
     </view>
   </block>
 </view>
+
+<wxs src="../../../wxs/formatTime.wxs" module="formatTime"></wxs>

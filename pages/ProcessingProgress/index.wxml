@@ -28,7 +28,7 @@
 						class="van-steps" />
 					<view class="wxWrapper">
 						<view class="axxsasa11" bindtap="anotherWork" data-Touchid="{{item}}">外协</view>
-						<view class="axxsasa12">{{item.delegated.undo ? item.delegated.undo : '0'}}/{{item.delegated.total ? item.delegated.total : '0'}}</view>
+						<view class="axxsasa12">{{undo ? undo : '0'}}/{{total ? total : '0'}}</view>
 					</view>
 				</view>
 			</van-collapse-item>

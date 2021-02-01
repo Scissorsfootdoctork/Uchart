@@ -67,12 +67,6 @@
           "scene": null
         },
         {
-          "name": "pages/singlrSeletedProcess/index",
-          "pathName": "pages/singlrSeletedProcess/index",
-          "query": "",
-          "scene": null
-        },
-        {
           "name": "pages/seletedProcess/index",
           "pathName": "pages/seletedProcess/index",
           "query": "",
@@ -105,6 +99,25 @@
         {
           "name": "pages/StaffManagement/index",
           "pathName": "pages/StaffManagement/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/singlrSeletedProcess/index",
+          "pathName": "pages/singlrSeletedProcess/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/monthyield/index",
+          "pathName": "pages/monthyield/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/qualityInspection/index",
+          "pathName": "pages/qualityInspection/index",
+          "query": "",
           "scene": null
         }
       ]

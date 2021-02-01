@@ -79,31 +79,15 @@ Page({
 	},
 
 	getSettingForItem(data) {
-		wx.showLoading({
+  		wx.showLoading({
 			title: '正在加载...',
 		})
 		let main = {}
-		let toparr = []
-		let mainarr = []
-		let marginner = data.管理
-		let user = data.我的
-		for (let key in data) {
-			if (key === '首页') {
-				const shouye = data[key]
-				shouye.forEach((item) => {
-					if (item.menu === "topItem") {
-						toparr.push(item)
-					} else {
-						mainarr.push(item)
-					}
-				})
-			}
-		}
-		main.topitem = toparr
-		main.mainitem = mainarr
+		main.topitem = data.topItem
+		main.mainitem = data.mainItem
 		wx.setStorageSync('main', main)
-		wx.setStorageSync('marginner', marginner)
-		wx.setStorageSync('user', user)
+		wx.setStorageSync('management', data.management)
+		wx.setStorageSync('user', data.user)
 		wx.hideLoading({
 			success: (res) => {},
 		})

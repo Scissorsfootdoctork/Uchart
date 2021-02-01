@@ -26,10 +26,15 @@
     </view>
 
     <my-select title="部门" arrData="{{dept_data}}" index="{{deptIndex}}" bind:sendEvent="deptValue"></my-select>
-		<my-select title="组别" arrData="{{dept1_data}}" bind:sendEvent="dept1Value"></my-select>
+    <my-select title="组别" arrData="{{dept1_data}}" bind:sendEvent="dept1Value"></my-select>
+    <view class="changeItem nomal">
+        <text class="name">业务:</text>
+        <view class="right">
+        </view>
+      </view>
     <view class="job-select">
-		<Job-select List="{{jobList}}" bind:sendEvent="jobValue"></Job-select>
-	</view>
+      <Job-select List="{{jobList}}" bind:sendEvent="jobValue"></Job-select>
+    </view>
 
     <view class="btn-area">
       <button class="btn" formType="submit">提交</button>

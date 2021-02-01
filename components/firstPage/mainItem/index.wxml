@@ -1,22 +1,15 @@
 <view class="main">
-    <view class="main-wrapper">
-      <view 
-      class="item-wrapper" 
-      wx:for="{{itemList}}" 
-      wx:key="index" 
-      data-Touchid="{{item.id}}" 
-			bindtap="mainTab"
-			wx:if="{{!item.show_salary && !item.has_single_piece}}"
-      >
-				<view class="item-wrapper-left">
-					<text class="name">{{item.name}}</text>
-					<text class="detail">{{item.id == 1 ? moneyData.todayProduction : item.id == 4 ? moneyData.todaySalary : item.id == 3 ? moneyData.monthProduction : item.id == 7 ? moneyData.monthSalary : item.id == 5 ? moneyData.rank : item.detail}}</text>
-				</view>
-				<view class="item-wrapper-right">
-					<image mode="aspectFit" class="right-img"
-						src="{{item.imgUrl}}">
-					</image>
-				</view>
-      </view>
+	<view class="main-wrapper">
+		<view class="item-wrapper" wx:for="{{itemList}}" wx:key="index" data-Touchid="{{item}}" bindtap="mainTab">
+			<view class="item-wrapper-left">
+				<text class="name">{{item.name}}</text>
+				<text
+					class="detail">{{item.purview_id == 14 ? moneyData.todayProduction ? moneyData.todayProduction : 0 : item.purview_id == 15 ? moneyData.todaySalary ? moneyData.todaySalary : 0 : item.purview_id == 16 ? moneyData.monthProduction ? moneyData.monthProduction : 0 : item.purview_id == 17 ? moneyData.monthSalary ? moneyData.monthSalary : 0 : item.purview_id == 18 ? moneyData.rank ? moneyData.rank : 0 : item.detail}}</text>
+			</view>
+			<view class="item-wrapper-right">
+				<image mode="aspectFit" class="right-img" src="{{item.icon}}">
+				</image>
+			</view>
 		</view>
 	</view>
+</view>

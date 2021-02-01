@@ -22,21 +22,16 @@
   border-bottom: 1px solid var(--weui-FG-3);
 }
 
-.title1{
-  font-size: 38rpx;
-  color: #303133;
-}
-
 .name{
   display: block;
-  width: 140rpx;
+  width: 100rpx;
 }
 .detail{
   box-sizing: border-box;
   flex: 1;
   color: #303133;
   display: block;
-  padding: 0 40rpx;
+  padding: 0 20rpx;
 }
 
 .midele-title {

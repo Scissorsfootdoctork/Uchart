@@ -34,9 +34,9 @@ Page({
 	},
 
 	stapClick(e) {
-		if (e.detail == 2) {
+		if (e.detail == 1) {
 			this.fun2()
-		} else if (e.detail == 3) {
+		} else if (e.detail == 2) {
 			this.fun3()
 		}
 	},
@@ -101,10 +101,7 @@ Page({
 				o.ticket_state = item.sew_state
 				o.clothes_state = item.clothes_state
 			})
-			let arr = [{
-					text: '生产单',
-					desc: res.data[0].num
-				},
+			let arr = [
 				{
 					text: '裁剪',
 					desc: res.data[0].cut_num
@@ -128,7 +125,9 @@ Page({
 			this.setData({
 				popupData: res.data[0].delegated,
 				steps: arr,
-				active: a.length - 1
+				active: a.length - 1,
+				undo: res.data[0].delegated ? res.data[0].delegated.undo : 0,
+				total: res.data[0].delegated ? res.data[0].delegated.total : 0
 			})
 		})
 	},

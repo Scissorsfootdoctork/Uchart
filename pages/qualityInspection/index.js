@@ -190,7 +190,7 @@ Page({
   },
 
   onLoad(options) {
-    options.ticket_id ? options.ticket_id : options.ticket_id = 'CJ00012-00005'
+    options.ticket_id ? options.ticket_id : options.ticket_id = 'CJ00069-00011'
     this.setData({
       ticket_no: options.ticket_id
     })

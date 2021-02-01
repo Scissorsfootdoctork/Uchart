@@ -1,0 +1,16 @@
+  var formatNumber = function (n) {
+    n = n.toString();
+    return n[1] ? n : '0' + n;
+  }
+
+  var change = function (number) {
+    var date = getDate((number) * 1000);
+    var Y = date.getFullYear()
+    var M = formatNumber(date.getMonth() + 1)
+    var D = formatNumber(date.getDate())
+    return Y + "-" + M + "-" + D
+  }
+
+  module.exports = {
+    getDateTime: change
+  }
