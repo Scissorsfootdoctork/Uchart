@@ -58,69 +58,7 @@
       "list": []
     },
     "miniprogram": {
-      "list": [
-        {
-          "id": -1,
-          "name": "pages/login/login",
-          "pathName": "pages/login/login",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/seletedProcess/index",
-          "pathName": "pages/seletedProcess/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/changeProcess/index",
-          "pathName": "pages/changeProcess/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/ProcessingProgress/index",
-          "pathName": "pages/ProcessingProgress/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/ProcessingProgress/wxDetail/index",
-          "pathName": "pages/ProcessingProgress/wxDetail/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/management/index",
-          "pathName": "pages/management/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/StaffManagement/index",
-          "pathName": "pages/StaffManagement/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/singlrSeletedProcess/index",
-          "pathName": "pages/singlrSeletedProcess/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/monthyield/index",
-          "pathName": "pages/monthyield/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/qualityInspection/index",
-          "pathName": "pages/qualityInspection/index",
-          "query": "",
-          "scene": null
-        }
-      ]
+      "list": []
     }
   }
 }

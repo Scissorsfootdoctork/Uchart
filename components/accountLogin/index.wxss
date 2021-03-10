@@ -1,0 +1,35 @@
+.main {
+	padding: 40rpx 80rpx;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.main-item {
+	width: 100%;
+	margin: 40rpx 0;
+	background-color: rgb(246, 246, 246);
+	padding: 30rpx 0;
+}
+
+.weui-input{
+	margin: 0 20rpx;
+}
+
+.tag{
+	color: rgb(201, 201, 201);
+}
+
+.btn-area{
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0 80rpx;
+	display: flex;
+	flex-direction: column;
+}
+
+.btn{
+	width: 100%;
+	background-color: rgb(21, 150, 219);
+	color: white;
+	margin-bottom: 20rpx;
+}

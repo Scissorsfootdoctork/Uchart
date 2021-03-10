@@ -3,9 +3,10 @@ import HttpRequeat from '../../utils/Http'
 Page({
 	data: {
 		result: null,
-		scopeButton: false
+		scopeButton: false,
+		buttonType: false,
+		showAccount: true
 	},
-
 	onLoad() {
 		wx.clearStorage()
 		const that = this
@@ -34,16 +35,6 @@ Page({
 			}
 		})
 	},
-
-	bindGetUserInfo(e) {
-		if (e.detail.userInfo) {
-			this.setData({
-				scopeButton: false,
-				result: e.detail,
-			})
-		}
-	},
-
 	wxLogin() {
 		let that = this
 		wx.login({
@@ -56,6 +47,11 @@ Page({
 							code: res.code
 						},
 						success(res) {
+							if (res.data.code == 1) {
+								that.setData({
+									buttonType: true
+								})
+							}
 							if (res.data.data.errCode == 0) {
 								wx.setStorageSync('token', res.data.data.token)
 								wx.setStorageSync('center_id', res.data.data.userInfo.center_id)
@@ -70,6 +66,11 @@ Page({
 								wx.setStorageSync('token', res.data.data.token)
 							}
 						},
+						fail() {
+							wx.showToast({
+								title: '请求失败请重试',
+							})
+						}
 					})
 				} else {
 					console.log('登录失败！' + res.errMsg)
@@ -77,9 +78,43 @@ Page({
 			}
 		})
 	},
-
+	getPhoneNumber(e) {
+		let obj = {
+			url: 'user/binding',
+			method: 'POST',
+			data: {
+				result: JSON.stringify(this.data.result),
+				user: '',
+				phone: JSON.stringify(e.detail),
+		 		token: wx.getStorageSync('token')
+			}
+		}
+		HttpRequeat(obj).then(res => {
+			if (res.data.code && res.data.code == 1) {
+				wx.showToast({
+					title: res.data.msg,
+					icon: 'none'
+				})
+				return
+			} else {
+				if (res.data.errCode == 0) {
+					this.wxLogin()
+				}
+			}
+			wx.hideLoading({
+				success: (res) => {},
+			})
+		})
+	},
+	bindGetUserInfo(e) {
+		console.log(e.detail)
+			this.setData({
+				scopeButton: false,
+				result: e.detail,
+			})
+	},
 	getSettingForItem(data) {
-  		wx.showLoading({
+		wx.showLoading({
 			title: '正在加载...',
 		})
 		let main = {}
@@ -92,8 +127,15 @@ Page({
 			success: (res) => {},
 		})
 	},
-
-	formSubmit(e) {
+	fSt(e) {
+		console.log(e.detail)
+		if(!e.detail.mobile && !e.detail.password) {
+			wx.showToast({
+				title: '请输入账号密码',
+				icon: 'none'
+			})
+			return
+		}
 		if (!this.data.result) {
 			this.setData({
 				scopeButton: true,
@@ -109,32 +151,30 @@ Page({
 			this.wxLogin()
 			return
 		} else {
-			wx.showLoading({
-				title: '正在登录',
-			})
 			let obj = {
 				url: 'user/binding',
 				method: 'POST',
 				data: {
 					result: JSON.stringify(this.data.result),
-					user: JSON.stringify(e.detail.value)
+					user: JSON.stringify(e.detail)
 				}
 			}
 			HttpRequeat(obj).then(res => {
-				if (res.data.code && res.data.code == 1) {
-					wx.showToast({
-						title: res.data.msg,
-						icon: 'none'
-					})
-				} else {
 					if (res.data.errCode == 0) {
 						this.wxLogin()
 					}
-				}
-				wx.hideLoading({
-					success: (res) => {},
-				})
 			})
 		}
+	},
+
+	changeLogin() {
+		this.setData({
+			showAccount: !this.data.showAccount
+		})
+	},
+	onShow() {
+		this.setData({
+			showAccount: !this.data.showAccount
+		})
 	}
 })

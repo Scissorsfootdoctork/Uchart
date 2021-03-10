@@ -1,0 +1,13 @@
+<view class="getSure" wx:if="{{scopeButton}}">
+		<view class="toparea">
+			<view class="avatar">
+				<image class="img" mode="aspectFit"
+					src="https://jack-mes.oss-cn-hangzhou.aliyuncs.com/center/1/2020/11/8368d252861fd3eacf42fe1664d495bf.png">
+				</image>
+			</view>
+		</view>
+		<text class="tagsna">
+			授权后即可使用【电子工票】小程序提供的服务
+		</text>
+		<button open-type="getUserInfo" class="btn" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+	</view>

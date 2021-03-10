@@ -27,7 +27,8 @@
     "pages/ProcessingProgress/ReadyToWear/index",
     "pages/singlrSeletedProcess/index",
     "pages/waixScan/index",
-    "pages/ProcessingProgress/wxDetail/index"
+    "pages/ProcessingProgress/wxDetail/index",
+    "components/accountLogin/index"
   ],
   "tabBar": {
     "borderStyle": "black",

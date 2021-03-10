@@ -1,0 +1,6 @@
+.main {
+	margin-top: 370rpx;
+	padding: 40rpx 80rpx;
+	width: 100%;
+	box-sizing: border-box;
+}

@@ -1,0 +1,16 @@
+<view>
+		<form catchsubmit="formSubmit">
+		<view class="main">
+			<view class="main-item" bindtap="lookingMoney">
+				<input class="weui-input" maxlength="11" type="number" name="mobile" placeholder="请输入手机号" />
+			</view>
+			<view class="main-item" bindtap="lookingMoney">
+				<input class="weui-input" password type="text" name="password" placeholder="请输入密码" />
+			</view>
+			<view class="tag">没有账号密码，请联系管理员</view>
+		</view>
+		<view class="btn-area">
+			<button class="btn" open-type="getUserInfo" formType="submit" disabled="{{buttonType}}">{{!buttonType ? '登录' : '请先选择小程序版本'}}</button>
+		</view>
+	</form>
+</view>

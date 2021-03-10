@@ -1,5 +1,10 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "accountLogin": "../../components/accountLogin",
+    "phoneLogin": "../../components/phoneLogin",
+    "scopeBtn": "../../components/scopeButton",
+    "van-empty": "@vant/weapp/empty/index"
+  },
   "navigationBarTextStyle": "black",
   "navigationBarBackgroundColor": "#ffffff"
 }
